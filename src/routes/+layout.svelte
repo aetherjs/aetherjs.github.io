@@ -1,13 +1,18 @@
 <script>
   import "../app.postcss";
+  import { page } from "$app/stores";
   import { onMount } from "svelte";
 
   let themeButtonEmoji = "🌝";
+
   let isDark = localStorage.getItem("aetherdarktheme") === "true" ?? false;
   if (isDark) {
     document.documentElement.classList.add("dark");
     themeButtonEmoji = "🌞";
   }
+
+  let headerOpacity = 1;
+  let maxHeight = 200; // Default value
 
   const toggleTheme = () => {
     isDark = !isDark;
@@ -21,27 +26,77 @@
       themeButtonEmoji = "🌝";
     }
   };
+
+  onMount(() => {
+    // Define your media queries
+    const mediaQueries = {
+      small: window.matchMedia("(max-width: 640px)"),
+      medium: window.matchMedia("(min-width: 641px) and (max-width: 1024px)"),
+      large: window.matchMedia("(min-width: 1025px)"),
+    };
+
+    const calculateMaxHeight = () => {
+      // Update maxHeight based on the screen size
+      if (mediaQueries.small.matches) {
+        maxHeight = 16 * 0.8;
+      } else if (mediaQueries.medium.matches) {
+        maxHeight = 32 * 0.8;
+      } else if (mediaQueries.large.matches) {
+        maxHeight = 80 * 0.8;
+      }
+    };
+
+    const fadeOnScroll = () => {
+      const scrollPos = window.scrollY;
+      headerOpacity = Math.max(0, 1 - scrollPos / maxHeight);
+    };
+
+    // Initialize
+    calculateMaxHeight();
+    fadeOnScroll();
+
+    window.addEventListener("scroll", fadeOnScroll);
+    for (const mq of Object.values(mediaQueries)) {
+      mq.addListener(calculateMaxHeight);
+      mq.addListener(fadeOnScroll);
+    }
+
+    return () => {
+      window.removeEventListener("scroll", fadeOnScroll);
+      for (const mq of Object.values(mediaQueries)) {
+        mq.removeListener(calculateMaxHeight);
+        mq.removeListener(fadeOnScroll);
+      }
+    };
+  });
 </script>
 
 <header
   class="sticky top-0 z-50 py-2 bg-white dark:bg-black drop-shadow-lg transition-colors duration-500 ease-in-out"
+  style="opacity: {headerOpacity}; transition: opacity 0.3s ease-in-out"
 >
   <nav class="flex justify-between m-3">
-    <div class="flex gap-0">
+    <div class="flex gap-0 sm:gap-3 lg:gap-6 flex-grow sm:justify-center">
       <a
         href="/"
-        class="mx-2 text-xl sm:text-3xl lg:text-5xl font-basteleur font-semibold dark:text-white"
-        >Home</a
+        class="mx-2 text-xl sm:text-3xl lg:text-5xl font-basteleur font-semibold dark:text-white hover:-translate-y-2 transition-transform duration-200 hover:text-zinc-600 dark:hover:text-zinc-300 {$page
+          .url.pathname === '/'
+          ? 'underline'
+          : ''}">Home</a
       >
       <a
         href="/honours"
-        class="mx-2 text-xl sm:text-3xl lg:text-5xl font-basteleur font-semibold dark:text-white"
-        >Honours</a
+        class="mx-2 text-xl sm:text-3xl lg:text-5xl font-basteleur font-semibold dark:text-white hover:-translate-y-2 transition-transform duration-200 hover:text-zinc-600 dark:hover:text-zinc-300 {$page
+          .url.pathname === '/honours'
+          ? 'underline'
+          : ''}">Honours</a
       >
       <a
         href="/notes"
-        class="mx-2 text-xl sm:text-3xl lg:text-5xl font-basteleur font-semibold dark:text-white"
-        >Notes</a
+        class="mx-2 text-xl sm:text-3xl lg:text-5xl font-basteleur font-semibold dark:text-white hover:-translate-y-2 transition-transform duration-200 hover:text-zinc-600 dark:hover:text-zinc-300 {$page
+          .url.pathname === '/notes'
+          ? 'underline'
+          : ''}">Notes</a
       >
       <!-- <a
       href="/lab"
@@ -51,7 +106,7 @@
     </div>
     <button
       on:click={toggleTheme}
-      class="mx-2 text-l sm:text-3xl lg:text-5xl font-basteleur font-semibold dark:text-white"
+      class="mx-2 text-l sm:text-3xl lg:text-5xl font-basteleur font-semibold dark:text-white hover:blur transition duration-300"
       >{themeButtonEmoji}</button
     >
   </nav>
