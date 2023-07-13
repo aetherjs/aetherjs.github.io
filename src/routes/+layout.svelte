@@ -79,34 +79,27 @@
     <div class="flex gap-0 sm:gap-3 lg:gap-6 flex-grow sm:justify-center">
       <a
         href="/"
-        class="mx-2 text-xl sm:text-3xl lg:text-5xl font-basteleur font-semibold dark:text-white hover:-translate-y-2 transition-transform duration-200 hover:text-zinc-600 dark:hover:text-zinc-300 {$page
-          .url.pathname === '/'
-          ? 'underline'
-          : ''}">Home</a
+        class="nav-link {$page.url.pathname === '/' ? 'underline' : ''}">Home</a
       >
       <a
-        href="/honours"
-        class="mx-2 text-xl sm:text-3xl lg:text-5xl font-basteleur font-semibold dark:text-white hover:-translate-y-2 transition-transform duration-200 hover:text-zinc-600 dark:hover:text-zinc-300 {$page
-          .url.pathname === '/honours'
-          ? 'underline'
-          : ''}">Honours</a
+        href="/work"
+        class="nav-link {$page.url.pathname === '/work' ? 'underline' : ''}"
+        >CV</a
       >
       <a
         href="/notes"
-        class="mx-2 text-xl sm:text-3xl lg:text-5xl font-basteleur font-semibold dark:text-white hover:-translate-y-2 transition-transform duration-200 hover:text-zinc-600 dark:hover:text-zinc-300 {$page
-          .url.pathname === '/notes'
-          ? 'underline'
-          : ''}">Notes</a
+        class="nav-link {$page.url.pathname === '/notes' ? 'underline' : ''}"
+        >Notes</a
       >
-      <!-- <a
-      href="/lab"
-      class="mx-4 text-xl sm:text-3xl lg:text-5xl font-basteleur font-semibold dark:text-white"
-      >Lab</a
-    > -->
+      <a
+        href="/lab"
+        class="nav-link {$page.url.pathname === '/lab' ? 'underline' : ''}"
+        >Lab</a
+      >
     </div>
     <button
       on:click={toggleTheme}
-      class="mx-2 text-l sm:text-3xl lg:text-5xl font-basteleur font-semibold dark:text-white hover:blur transition duration-300"
+      class="mx-2 text-l sm:text-3xl lg:text-5xl font-basteleur font-semibold dark:text-white hover:blur-sm transition duration-300"
       >{themeButtonEmoji}</button
     >
   </nav>

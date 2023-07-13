@@ -7,6 +7,17 @@ body {
   @apply bg-white dark:bg-black text-black dark:text-white transition-colors duration-500 ease-in-out;
 }
 
+@layer components {
+  .nav-link {
+    @apply mx-2 text-xl sm:text-3xl lg:text-5xl font-basteleur font-semibold dark:text-white hover:-translate-y-2 transition-transform duration-200 hover:text-zinc-600 dark:hover:text-zinc-300;
+  }
+}
+
+:global(.group:hover .group-hover\:text-violet-500) {
+  color: #7C3AED; /* Tailwind's violet-500 color */
+}
+
+
 @font-face {
     font-family: 'Basteleur';
     src: url('/fonts/Basteleur-Bold.ttf');
