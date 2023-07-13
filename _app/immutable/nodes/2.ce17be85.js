@@ -1,4 +1,4 @@
-import{s as R,n as N}from"../chunks/scheduler.e108d1fd.js";import{S as H,i as K,g as s,s as o,h as l,z as a,c as r,k as W,a as i,f as n}from"../chunks/index.509b35b2.js";function B(Q){let u,F="Welcome, Stranger!",q,c,V="My name is Vlad Repinskiy, I am a Fullstack developer in the making.",g,m,A=`Even before university, I had experience with programming. Starting off with
+import{s as R,n as N}from"../chunks/scheduler.d35e8dc7.js";import{S as H,i as K,g as s,s as o,h as l,z as a,c as r,k as W,a as i,f as n}from"../chunks/index.7c446a16.js";function B(Q){let u,F="Welcome, Stranger!",q,c,V="My name is Vlad Repinskiy, I am a Fullstack developer in the making.",g,m,A=`Even before university, I had experience with programming. Starting off with
   competitive programming in school left me with a foundation to build upon in
   low-level languages like C and C++.`,y,p,M=`Uni projects taught me Java, Kotlin (I really prefer the latter) and Python
   well. More specifically, I have good experience with OOP development, various
