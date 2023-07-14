@@ -72,8 +72,8 @@
 </script>
 
 <header
-  class="sticky top-0 z-50 py-2 bg-white dark:bg-black drop-shadow-lg transition-colors duration-500 ease-in-out"
-  style="opacity: {headerOpacity}; transition: opacity 0.3s ease-in-out"
+  class="sticky top-0 z-50 py-2 bg-white dark:bg-black transition-colors duration-500 ease-in-out"
+  style="opacity: {headerOpacity}"
 >
   <nav class="flex justify-between m-3">
     <div class="flex gap-0 sm:gap-3 lg:gap-6 flex-grow sm:justify-center">
@@ -105,6 +105,8 @@
   </nav>
 </header>
 
-<div class="grid grid-cols-1 gap-8 p-4 sm:p-8 lg:p-20">
+<div
+  class="mx-auto max-w-xs sm:max-w-screen-sm lg:max-w-screen-lg grid grid-cols-1 gap-8 p-4 sm:p-8 lg:p-20"
+>
   <slot />
 </div>
