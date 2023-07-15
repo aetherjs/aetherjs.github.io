@@ -1,4 +1,4 @@
-import{s as O,n as z}from"../chunks/scheduler.d35e8dc7.js";import{S as R,i as T,g as u,s as l,h as n,z as a,c as r,k as W,a as i,f as s}from"../chunks/index.7c446a16.js";function X(K){let o,Q="Notes from the mentally ill",h,c,U="Might start a blog here or smt mane idek...",N,m,M=`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed nisl
+import{s as O,n as z}from"../chunks/scheduler.7da07d1d.js";import{S as R,i as T,g as u,s as l,h as n,z as a,c as r,k as W,a as i,f as s}from"../chunks/index.d472315b.js";function X(K){let o,Q="Notes from the mentally ill",h,c,U="Might start a blog here or smt mane idek...",N,m,M=`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed nisl
   semper, fermentum turpis eget, aliquam velit. Nunc quis ligula nisl. Curabitur
   eu pharetra urna, ut dapibus elit. Sed turpis tortor, tristique vel dignissim
   ac, convallis eget lacus. Suspendisse cursus urna quis libero consequat, eu
