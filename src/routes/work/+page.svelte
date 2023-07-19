@@ -29,13 +29,11 @@
   ];
 </script>
 
-<h1 class="text-l sm:text-2xl lg:text-4xl font-bold font-basteleur">
-  Work Lore:
-</h1>
+<h1 class="text-l sm:text-2xl lg:text-4xl font-bold font-karla">Work Lore:</h1>
 
 {#each testData as episode, index (episode.heading)}
   <div class="">
-    <h2 class="text-m sm:text-l lg:text-2xl font-basteleur">
+    <h2 class="text-m sm:text-l lg:text-2xl font-karla">
       {episode.heading}
     </h2>
     <h3 class="font-bold">{episode.dates}</h3>
@@ -70,9 +68,7 @@
   lobortis diam, at porttitor ex odio vitae dolor.
 </p>
 
-<h1 class="text-l sm:text-2xl lg:text-4xl font-bold font-basteleur">
-  Education
-</h1>
+<h1 class="text-l sm:text-2xl lg:text-4xl font-bold font-karla">Education</h1>
 
 <p>
   Nullam eu consectetur sapien, euismod porta tortor. Pellentesque condimentum

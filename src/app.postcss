@@ -1,15 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Karla:wght@700&display=swap');
+
 /* Write your global styles here, in PostCSS syntax */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  @apply bg-white dark:bg-black text-black dark:text-white transition-colors duration-500 ease-in-out;
+  @apply font-inconsolata bg-white dark:bg-black text-black dark:text-white transition-colors duration-500 ease-in-out;
 }
 
 @layer components {
   .nav-link {
-    @apply mx-2 text-xl sm:text-3xl lg:text-5xl font-basteleur font-semibold dark:text-white hover:-translate-y-2 transition-transform duration-200 hover:text-zinc-600 dark:hover:text-zinc-300;
+    @apply mx-2 text-xl sm:text-3xl lg:text-5xl font-karla font-bold dark:text-white hover:-translate-y-2 transition-transform duration-200 hover:text-zinc-600 dark:hover:text-zinc-300;
   }
 }
 
@@ -31,3 +33,4 @@ body {
     font-weight: normal;
     font-style: normal;
 }
+

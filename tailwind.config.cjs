@@ -8,6 +8,8 @@ const config = {
     extend: {
       fontFamily: {
         basteleur: ['Basteleur', 'sans serif'],
+        karla: ['Karla', 'sans serif'],
+        inconsolata: ['Inconsolata', 'monospace']
       },
     },
   },

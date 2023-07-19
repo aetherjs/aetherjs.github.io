@@ -99,7 +99,7 @@
     </div>
     <button
       on:click={toggleTheme}
-      class="mx-2 text-l sm:text-3xl lg:text-5xl font-basteleur font-semibold dark:text-white hover:blur-sm transition duration-300"
+      class="mx-2 text-l sm:text-3xl lg:text-5xl font-semibold dark:text-white hover:blur-sm transition duration-300"
       >{themeButtonEmoji}</button
     >
   </nav>

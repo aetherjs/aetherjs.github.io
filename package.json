@@ -28,6 +28,11 @@
   },
   "type": "module",
   "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "front-matter": "^4.0.2",
+    "markdown-it": "^13.0.1",
+    "markdown-it-front-matter": "^0.2.3",
+    "path": "^0.12.7",
     "svelte-icons-pack": "^2.1.0"
   }
 }
