@@ -20,7 +20,7 @@ export async function load() {
     const { attributes, body } = fm(markdown);
 
     const content = md.render(body);
-    const url = `notes/${slug}`
+    const url = (attributes.url) ? (attributes.url) : `notes/${slug}`
 
     return { url, attributes, content };
   }));

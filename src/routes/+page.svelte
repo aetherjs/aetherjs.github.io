@@ -20,17 +20,6 @@
   Frameworks like pandas, numpy, tensorflow, stuff like that.
 </p>
 
-<iframe
-  style="border-radius:12px"
-  src="https://open.spotify.com/embed/playlist/54VojSl9hBIvfvSZjeo6ea?utm_source=generator&theme=0"
-  width="100%"
-  height="352"
-  frameBorder="0"
-  allowfullscreen=""
-  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-  loading="lazy"
-/>
-
 <p>
   For some time, I been working on the basic skillset necessary for DeFi
   development: teaching myself Solidity & EVM, along with JavaScript with all

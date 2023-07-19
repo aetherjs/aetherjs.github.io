@@ -11,6 +11,10 @@
 
 <ul>
   {#each data.posts as post}
-    <li><a href={post.url}>{post.attributes.title}</a></li>
+    <li>
+      <a href={post.url} target={post.url.startsWith("notes/") ? "" : "blank"}
+        >{post.attributes.title}
+      </a>
+    </li>
   {/each}
 </ul>
