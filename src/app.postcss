@@ -13,7 +13,26 @@ body {
   .nav-link {
     @apply mx-2 text-xl sm:text-3xl lg:text-5xl font-karla font-bold dark:text-white hover:-translate-y-2 transition-transform duration-200 hover:text-zinc-600 dark:hover:text-zinc-300;
   }
+
+  .text-link {
+    @apply mt-[-5px] underline transition-all duration-200 text-violet-600 group-hover:text-violet-400 group-hover:-translate-y-1 visited:text-violet-500 visited:group-hover:text-violet-400
+  }
 }
+
+@layer base {
+  h1 {
+    @apply my-4 text-lg sm:text-2xl lg:text-4xl font-bold font-karla;
+  }
+
+  h2 {
+    @apply my-4 text-base sm:text-xl lg:text-3xl font-semibold;
+  }
+
+  p {
+    @apply my-4
+  }
+}
+
 
 :global(.group:hover .group-hover\:text-violet-500) {
   color: #7C3AED; /* Tailwind's violet-500 color */

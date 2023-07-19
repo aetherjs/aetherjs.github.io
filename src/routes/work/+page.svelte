@@ -44,10 +44,7 @@
           src={VscLinkExternal}
           className="transition-all duration-200 group-hover:text-violet-500 group-hover:-translate-y-1"
         />
-        <a
-          class="mt-[-5px] underline transition-all duration-200 group-hover:text-violet-500 group-hover:-translate-y-1 visited:text-gray-400"
-          href={episode.link.url}
-        >
+        <a class="text-link" href={episode.link.url}>
           {episode.link.name}
         </a>
       </div>
