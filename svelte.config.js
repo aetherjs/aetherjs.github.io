@@ -8,7 +8,13 @@ const config = {
   preprocess: [vitePreprocess({})],
 
   kit: {
-    adapter: adapter(),
+    prerender: {
+      crawl: true,
+      entries: ['*', '/notes/samplepost', '/notes/anotherone']
+    },
+    adapter: adapter({
+      fallback: '200.html' // may differ from host to host
+    }),
     paths: {
       base: '',
     }
