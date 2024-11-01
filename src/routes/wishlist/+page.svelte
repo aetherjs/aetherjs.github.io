@@ -10,7 +10,6 @@
     return acc;
   }, {});
 </script>
-</script>
 
 <div class="max-w-4xl mx-auto px-4 py-8">
   <h1 class="text-4xl font-bold mb-8">Wishlist</h1>
