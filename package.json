@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "^2.0.0",
-    "@sveltejs/adapter-static": "^2.0.2",
+    "@sveltejs/adapter-static": "^2.0.3",
     "@sveltejs/kit": "^1.20.4",
     "add": "^2.0.6",
     "autoprefixer": "^10.4.14",
@@ -28,6 +28,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@notionhq/client": "^2.2.15",
     "cheerio": "^1.0.0-rc.12",
     "front-matter": "^4.0.2",
     "markdown-it": "^13.0.1",
