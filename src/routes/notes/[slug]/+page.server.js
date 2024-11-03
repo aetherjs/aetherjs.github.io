@@ -2,7 +2,7 @@
 import { promises as fs } from 'fs';
 import path from 'path';
 import markdownIt from 'markdown-it';
-import cheerio from 'cheerio';
+import * as cheerio from 'cheerio';
 
 
 const md = markdownIt();
