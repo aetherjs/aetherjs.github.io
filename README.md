@@ -18,3 +18,7 @@ Currently supported routes - `/honours` for experience and CV, `/lab` for potent
 `npm run dev` to run Vite development server
 
 `npm run deploy` to build static site and push to /gh-pages branch
+
+## Deployment 
+
+Vercel / Pages 
