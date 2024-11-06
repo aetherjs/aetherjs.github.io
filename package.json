@@ -1,35 +1,21 @@
 {
-  "name": "aetherjs.github.io",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "dev": "vite dev",
-    "build": "vite build",
-    "preview": "vite preview",
-    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-    "deploy": "vite build && npx gh-pages -d build -t true"
-  },
-  "devDependencies": {
-    "@sveltejs/adapter-static": "^3.0.0",
-    "@sveltejs/adapter-vercel": "^4.0.0",
-    "@sveltejs/kit": "^2.0.0",
-    "@tailwindcss/typography": "^0.5.9",
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.24",
-    "svelte": "^5.0.0",
-    "tailwindcss": "^3.3.2",
-    "typescript": "^5.0.0",
-    "vite": "^5.0.0"
-  },
-  "type": "module",
-  "dependencies": {
-    "@notionhq/client": "^2.2.15",
-    "cheerio": "^1.0.0-rc.12",
-    "front-matter": "^4.0.2",
-    "markdown-it": "^13.0.1",
-    "markdown-it-front-matter": "^0.2.3",
-    "path": "^0.12.7",
-    "svelte-icons-pack": "^2.1.0"
-  }
+	"name": "aetherjs.github.io",
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "^3.0.0",
+		"@sveltejs/kit": "^2.0.0",
+		"@sveltejs/vite-plugin-svelte": "^4.0.0",
+		"svelte": "^5.0.0",
+		"svelte-check": "^4.0.0",
+		"typescript": "^5.0.0",
+		"vite": "^5.0.3"
+	}
 }

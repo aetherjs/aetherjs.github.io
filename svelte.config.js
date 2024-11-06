@@ -1,24 +1,18 @@
-import adapter from '@sveltejs/adapter-static';
-import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
+import adapter from '@sveltejs/adapter-auto';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-  // This bad boy here came directly from setting typescript for the project...
-  // Consult https://kit.svelte.dev/docs/integrations#preprocessors
-  preprocess: [vitePreprocess({})],
+	// Consult https://svelte.dev/docs/kit/integrations
+	// for more information about preprocessors
+	preprocess: vitePreprocess(),
 
-  kit: {
-    prerender: {
-      crawl: true,
-      entries: ['*', '/notes/samplepost', '/notes/anotherone']
-    },
-    adapter: adapter({
-      fallback: '200.html' // may differ from host to host
-    }),
-    paths: {
-      base: '',
-    }
-  }
+	kit: {
+		// adapter-auto only supports some environments, see https://svelte.dev/docs/kit/adapter-auto for a list.
+		// If your environment is not supported, or you settled on a specific environment, switch out the adapter.
+		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
+		adapter: adapter()
+	}
 };
 
 export default config;

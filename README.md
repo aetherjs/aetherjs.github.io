@@ -1,24 +1,38 @@
-## What's this? 
+# sv
 
-My personal website, developed using SvelteKit for static site generation, styled with Tailwind, and deployed to GitHub pages using gh-pages npm package. 
+Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
-## Site map
+## Creating a project
 
-Currently supported routes - `/honours` for experience and CV, `/lab` for potential future experiments and cool little thingies, `/notes` for blogposts.
+If you're seeing this, you've probably already done this step. Congrats!
 
-## Stack
+```bash
+# create a new project in the current directory
+npx sv create
 
-- Svelte
-- SvelteKit
-- Tailwind CSS
-- Typescript
+# create a new project in my-app
+npx sv create my-app
+```
 
-## Development
+## Developing
 
-`npm run dev` to run Vite development server
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-`npm run deploy` to build static site and push to /gh-pages branch
+```bash
+npm run dev
 
-## Deployment 
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-Vercel / Pages 
+## Building
+
+To create a production version of your app:
+
+```bash
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
