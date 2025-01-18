@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Karla, Inconsolata } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
+import { ThemeProvider } from "@/context/ThemeContext";
 
 const karla = Karla({
   variable: "--font-karla",
@@ -20,14 +21,18 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang='en'>
-      <body className='h-screen overflow-hidden'>
-        <Header />
-        {children}
+      <body
+        className={`${karla.variable} ${inconsolata.variable} antialiased -screen overflow-hidden`}
+      >
+        <ThemeProvider>
+          <Header />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

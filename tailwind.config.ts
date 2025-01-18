@@ -6,15 +6,20 @@ export default {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        // Light mode
+        "primary-bg": "#ffffff",
+        "primary-text": "#1a1a1a",
+        // Dark mode
+        "dark-primary-bg": "#1a1a1a",
+        "dark-primary-text": "#ffffff",
       },
       fontFamily: {
-        heading: ["Karla", "sans-serif"],
-        body: ["Inconsolata", "sans-serif"],
+        heading: ["Montserrat", "sans-serif"],
+        body: ["Open Sans", "sans-serif"],
       },
     },
   },

@@ -1,12 +1,14 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useTheme } from "@/context/ThemeContext";
 
 export const Header = () => {
   const pathname = usePathname();
+  const { theme, toggleTheme } = useTheme();
 
   return (
-    <header className='w-full py-4 px-8 flex justify-between items-center'>
+    <header className='w-full py-4 px-8 flex justify-between items-center bg-primary-bg dark:bg-dark-primary-bg text-primary-text dark:text-dark-primary-text'>
       <nav className='flex gap-8'>
         <Link
           href='/'
@@ -33,8 +35,11 @@ export const Header = () => {
           Lab
         </Link>
       </nav>
-      <button className='text-xl hover:opacity-70 transition-opacity'>
-        ☀️
+      <button
+        onClick={toggleTheme}
+        className='text-xl hover:opacity-70 transition-opacity'
+      >
+        {theme === "light" ? "☀️" : "🌙"}
       </button>
     </header>
   );
