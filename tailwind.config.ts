@@ -18,8 +18,8 @@ export default {
         "dark-primary-text": "#ffffff",
       },
       fontFamily: {
-        heading: ["Montserrat", "sans-serif"],
-        body: ["Open Sans", "sans-serif"],
+        heading: ["Inconsolata", "sans-serif"],
+        body: ["Karla", "sans-serif"],
       },
     },
   },
