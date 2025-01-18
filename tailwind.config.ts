@@ -12,6 +12,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        heading: ["Karla", "sans-serif"],
+        body: ["Inconsolata", "sans-serif"],
+      },
     },
   },
   plugins: [],
