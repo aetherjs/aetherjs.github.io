@@ -1,24 +1,24 @@
-## What's this? 
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-My personal website, developed using SvelteKit for static site generation, styled with Tailwind, and deployed to GitHub pages using gh-pages npm package. 
+## Getting Started
 
-## Site map
+First, run the development server:
 
-Currently supported routes - `/honours` for experience and CV, `/lab` for potential future experiments and cool little thingies, `/notes` for blogposts.
+```bash
+bun dev
+```
 
-## Stack
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-- Svelte
-- SvelteKit
-- Tailwind CSS
-- Typescript
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## Development
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-`npm run dev` to run Vite development server
+## Learn More
 
-`npm run deploy` to build static site and push to /gh-pages branch
+To learn more about Next.js, take a look at the following resources:
 
-## Deployment 
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-Vercel / Pages 
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
