@@ -14,6 +14,10 @@ export const Header = () => {
     setMounted(true);
   }, []);
 
+  useEffect(() => {
+    console.log("Pathname changed to:", pathname);
+  }, [pathname]);
+
   return (
     <header className='w-full py-4 px-8 flex justify-between items-center bg-primary-bg dark:bg-dark-primary-bg text-primary-text dark:text-dark-primary-text'>
       <nav className='flex gap-8'>
