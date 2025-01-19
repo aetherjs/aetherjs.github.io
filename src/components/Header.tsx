@@ -6,17 +6,12 @@ import { useEffect, useState } from "react";
 
 export const Header = () => {
   const pathname = usePathname();
-  console.log("Current pathname:", pathname);
   const { theme, toggleTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
   }, []);
-
-  useEffect(() => {
-    console.log("Pathname changed to:", pathname);
-  }, [pathname]);
 
   return (
     <header className='w-full py-4 px-8 flex justify-between items-center bg-primary-bg dark:bg-dark-primary-bg text-primary-text dark:text-dark-primary-text'>
