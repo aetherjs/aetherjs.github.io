@@ -4,8 +4,8 @@ export default function Home() {
   return (
     <main className='min-h-screen flex items-center justify-center text-primary-text bg-primary-bg dark:bg-dark-primary-bg dark:text-dark-primary-text'>
       <div className='max-w-4xl mx-auto px-12 pt-16'>
-        <div className='flex items-center justify-center gap-2 lg:gap-8 mb-8'>
-          <h1 className='text-3xl md:text-6xl font-bold font-heading'>
+        <div className='flex items-center justify-center gap-3 lg:gap-8 mb-8'>
+          <h1 className='text-2xl md:text-6xl font-bold font-heading'>
             Welcome, Stranger!
           </h1>
           <div className='text-2xl md:text-6xl animate-wave'>👋🏻</div>
