@@ -10,16 +10,23 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Light mode
         "primary-bg": "#ffffff",
         "primary-text": "#1a1a1a",
-        // Dark mode
         "dark-primary-bg": "#1a1a1a",
         "dark-primary-text": "#ffffff",
       },
       fontFamily: {
-        heading: ["Inconsolata", "sans-serif"],
-        body: ["Karla", "sans-serif"],
+        heading: ["Karla", "sans-serif"],
+        body: ["Inconsolata", "sans-serif"],
+      },
+      animation: {
+        "spin-reverse": "spin-reverse 1s linear infinite",
+      },
+      keyframes: {
+        "spin-reverse": {
+          from: { transform: "rotate(360deg)" },
+          to: { transform: "rotate(0deg)" },
+        },
       },
     },
   },
