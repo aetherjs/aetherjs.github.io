@@ -2,10 +2,17 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTheme } from "@/context/ThemeContext";
+import { useEffect, useState } from "react";
 
 export const Header = () => {
   const pathname = usePathname();
+  console.log("Current pathname:", pathname);
   const { theme, toggleTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <header className='w-full py-4 px-8 flex justify-between items-center bg-primary-bg dark:bg-dark-primary-bg text-primary-text dark:text-dark-primary-text'>
@@ -35,12 +42,16 @@ export const Header = () => {
           Lab
         </Link>
       </nav>
-      <button
-        onClick={toggleTheme}
-        className='text-xl hover:opacity-70 transition-opacity'
-      >
-        {theme === "light" ? "☀️" : "🌙"}
-      </button>
+      <div className='w-8 h-8 flex items-center justify-center'>
+        {mounted && (
+          <button
+            onClick={toggleTheme}
+            className='text-xl hover:blur-sm transition-all duration-200 opacity-0 animate-fade-in'
+          >
+            {theme === "light" ? "☀️" : "🌙"}
+          </button>
+        )}
+      </div>
     </header>
   );
 };

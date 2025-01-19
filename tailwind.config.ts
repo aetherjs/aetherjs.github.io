@@ -21,11 +21,16 @@ export default {
       },
       animation: {
         "spin-reverse": "spin-reverse 1s linear infinite",
+        "fade-in": "fadeIn 0.3s ease-in forwards",
       },
       keyframes: {
         "spin-reverse": {
           from: { transform: "rotate(360deg)" },
           to: { transform: "rotate(0deg)" },
+        },
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
         },
       },
     },

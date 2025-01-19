@@ -26,6 +26,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+      const savedTheme = localStorage.theme;
+      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+        document.documentElement.setAttribute('data-theme', 'dark')
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light')
+      }
+    `,
+          }}
+        />
+      </head>
       <body
         className={`${karla.variable} ${inconsolata.variable} antialiased -screen overflow-hidden`}
       >
