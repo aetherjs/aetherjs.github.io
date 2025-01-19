@@ -22,6 +22,7 @@ export default {
       animation: {
         "spin-reverse": "spin-reverse 1s linear infinite",
         "fade-in": "fadeIn 0.3s ease-in forwards",
+        wave: "wave 2s ease-in-out 1s",
       },
       keyframes: {
         "spin-reverse": {
@@ -31,6 +32,13 @@ export default {
         fadeIn: {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
+        },
+        wave: {
+          "0%": { transform: "rotate(0deg)" },
+          "25%": { transform: "rotate(-20deg)" },
+          "50%": { transform: "rotate(10deg)" },
+          "75%": { transform: "rotate(-10deg)" },
+          "100%": { transform: "rotate(0deg)" },
         },
       },
     },
