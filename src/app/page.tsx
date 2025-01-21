@@ -2,13 +2,13 @@
 
 export default function Home() {
   return (
-    <main className='min-h-screen flex items-center justify-center text-primary-text bg-primary-bg dark:bg-dark-primary-bg dark:text-dark-primary-text'>
-      <div className='max-w-4xl mx-auto px-12 pt-16'>
+    <main className='h-[calc(100vh-4rem)]  flex items-center justify-center text-primary-text bg-primary-bg dark:bg-dark-primary-bg dark:text-dark-primary-text'>
+      <div className='max-w-4xl mx-auto px-12'>
         <div className='flex items-center justify-center gap-3 lg:gap-8 mb-8'>
+          <div className='text-2xl md:text-6xl animate-wave'>👋🏻</div>
           <h1 className='text-2xl md:text-6xl font-bold font-heading'>
             Welcome, Stranger!
           </h1>
-          <div className='text-2xl md:text-6xl animate-wave'>👋🏻</div>
         </div>
         <div className='space-y-6 text-base md:text-lg font-body '>
           <p>

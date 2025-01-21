@@ -41,9 +41,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body
-        className={`${karla.variable} ${inconsolata.variable} antialiased -screen overflow-hidden`}
-      >
+      <body className={`${karla.variable} ${inconsolata.variable} antialiased`}>
         <ThemeProvider>
           <Header />
           {children}

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTheme } from "@/context/ThemeContext";
 import { useEffect, useState } from "react";
+
 export const Header = () => {
   const pathname = usePathname();
   const { theme, toggleTheme } = useTheme();
