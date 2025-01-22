@@ -100,8 +100,8 @@ const educationData: Expirience = {
 
 export default function CV() {
   return (
-    <div className='bg-primary-bg dark:bg-dark-primary-bg text-primary-text dark:text-dark-primary-text min-h-screen md:pt-28'>
-      <div className='max-w-4xl mx-auto px-12 py-8'>
+    <div className='min-h-screen pt-[72px] md:pb-12 bg-primary-bg dark:bg-dark-primary-bg text-primary-text dark:text-dark-primary-text'>
+      <div className='max-w-4xl mx-auto px-12 py-8 pt-32'>
         <h1 className='text-2xl md:text-6xl font-bold font-heading mb-8 lg:text-center'>
           Work
         </h1>

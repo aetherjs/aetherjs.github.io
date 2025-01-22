@@ -1,6 +1,6 @@
 export const WorkInProgress = () => {
   return (
-    <div className='min-h-[calc(100vh-4rem)] md:h-[calc(100vh-4rem)] overflow-hidden flex flex-col items-center justify-center p-4 sm:p-8 bg-primary-bg dark:bg-dark-primary-bg text-primary-text dark:text-dark-primary-text'>
+    <div className='min-h-[100dvh] md:h-[100dvh] pt-[72px] overflow-hidden flex flex-col items-center justify-center p-4 sm:p-8 bg-primary-bg dark:bg-dark-primary-bg text-primary-text dark:text-dark-primary-text'>
       <h1 className='font-heading text-2xl md:text-6xl font-bold mb-4 text-center'>
         Work in Progress
       </h1>

@@ -8,13 +8,28 @@ export const Header = () => {
   const pathname = usePathname();
   const { theme, toggleTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const [opacity, setOpacity] = useState(1);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const fadeThreshold = window.innerWidth < 768 ? 30 : 120;
+      const scrollPercentage = Math.min(window.scrollY / fadeThreshold, 1);
+      setOpacity(1 - scrollPercentage);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className='w-full py-4 px-8 flex md:grid md:grid-cols-3 items-center bg-primary-bg dark:bg-dark-primary-bg text-primary-text dark:text-dark-primary-text'>
+    <header
+      className='w-full py-4 px-8 flex md:grid md:grid-cols-3 items-center bg-primary-bg dark:bg-dark-primary-bg text-primary-text dark:text-dark-primary-text fixed top-0'
+      style={{ opacity: opacity }}
+    >
       <nav className='flex gap-8 md:gap-20 md:col-start-2 md:justify-center'>
         <Link
           href='/'
@@ -31,6 +46,14 @@ export const Header = () => {
           }`}
         >
           CV
+        </Link>
+        <Link
+          href='/blog'
+          className={`font-heading hover:opacity-70 transition-all text-xl md:text-4xl hover:-translate-y-0.5 ${
+            pathname === "/blog" ? "underline underline-offset-8" : ""
+          }`}
+        >
+          Blog
         </Link>
         <Link
           href='/lab'
