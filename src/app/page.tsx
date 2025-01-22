@@ -2,8 +2,8 @@
 
 export default function Home() {
   return (
-    <main className='min-h-[calc(100vh-4rem)] md:h-[calc(100vh-4rem)] py-8 flex items-center justify-center text-primary-text bg-primary-bg dark:bg-dark-primary-bg dark:text-dark-primary-text overflow-y-auto md:overflow-hidden'>
-      <div className='max-w-4xl mx-auto px-12'>
+    <main className='min-h-[100dvh] md:h-[100dvh] pt-[72px] pb-6 flex items-center justify-center text-primary-text bg-primary-bg dark:bg-dark-primary-bg dark:text-dark-primary-text overflow-y-auto md:overflow-hidden'>
+      <div className='max-w-4xl mx-auto px-12 py-8'>
         <div className='flex items-center  gap-3 lg:gap-8 mb-8'>
           <div className='text-2xl md:text-6xl animate-wave'>👋🏻</div>
           <h1 className='text-2xl md:text-6xl font-bold font-heading'>
