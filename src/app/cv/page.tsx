@@ -6,10 +6,10 @@ interface Expirience {
   subheading?: string;
   dates: string;
   description: string;
-  link?: {
+  links?: {
     name: string;
     url: string;
-  };
+  }[];
 }
 
 type Experiences = Expirience[];
@@ -26,20 +26,28 @@ const workData: Experiences = [
     dates: "October 2021 - August 2022",
     description:
       "Building up from scratch an Ethereum-based project of soulbound token, pioneering in digital identity, reputation and gamified achievements system in the web3, solving unique challenges to achieve complete and true decentralisation of metadata storage for dynamic NFTs, shifting the transaction cost burden from users to the DApp. Handling development of decentralised web app (built with Next.js, Express.js and Ethers.js) along with the smart contract logic and security (Solidity, Hardhat, Foundry) in a small team of two, writing articles for the dev blog linked below.",
-    link: {
-      name: "soulbonds.xyz dev blog on mirror",
-      url: "https://mirror.xyz/soulbonds.eth",
-    },
+    links: [
+      {
+        name: "soulbonds.xyz dev blog",
+        url: "https://mirror.xyz/soulbonds.eth",
+      },
+      {
+        name: "etherscan",
+        url: "https://etherscan.io/address/0x37c60c642934d82c36f8d94f893c2acee90a6e5e",
+      },
+    ],
   },
   {
     heading: "Jetbrains Research",
     dates: "Summer 2020",
     description:
       "A research project in the R&D unit of the dev tools colossus. Under the supervision developed a code dependency extraction tool...",
-    link: {
-      name: "paper preprint",
-      url: "https://arxiv.org/abs/2104.09473",
-    },
+    links: [
+      {
+        name: "paper preprint",
+        url: "https://arxiv.org/abs/2104.09473",
+      },
+    ],
   },
 ];
 
@@ -53,7 +61,7 @@ const educationData: Expirience = {
 
 export default function CV() {
   return (
-    <div className='bg-primary-bg dark:bg-dark-primary-bg text-primary-text dark:text-dark-primary-text min-h-screen pt-28'>
+    <div className='bg-primary-bg dark:bg-dark-primary-bg text-primary-text dark:text-dark-primary-text min-h-screen md:pt-28'>
       <div className='max-w-4xl mx-auto px-12 py-8'>
         <h1 className='text-2xl md:text-6xl font-bold font-heading mb-8 lg:text-center'>
           Work
