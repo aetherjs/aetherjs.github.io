@@ -51,6 +51,45 @@ const workData: Experiences = [
   },
 ];
 
+const certifications: Experiences = [
+  {
+    heading: "AWS Cloud Practitioner",
+    dates: "2023",
+    description:
+      "Foundation-level certification validating comprehensive understanding of AWS Cloud concepts, services, and terminology. Demonstrates knowledge of cloud computing models, AWS global infrastructure, key services, security practices, pricing, and support. Covers essential cloud architectural principles and the AWS shared responsibility model for security and compliance.",
+    links: [
+      {
+        name: "Verify on Credly",
+        url: "https://www.credly.com/badges/255ad2f9-2a7a-4c0a-986f-a06839b0f68b",
+      },
+    ],
+  },
+  {
+    heading: "IMD GenAI for Business Sprint",
+    dates: "November 2024",
+    description:
+      "An intensive one-week executive program focused on practical business applications of generative AI. Covered key areas including AI/ML fundamentals, business implementation strategies, and ethical considerations in AI adoption. The program provided hands-on experience with tools like ChatGPT while addressing crucial aspects of AI governance, regulatory compliance, and successful enterprise implementation patterns. Part of the Executive Certificate in Digital Business Excellence track.",
+    links: [
+      {
+        name: "Verify on Smart Certificate",
+        url: "https://www.smartcertificate.com/SmartDiploma/Default.aspx?1%7cecfc5352-71c7-47a9-9485-545d2a661f34%7cebbd4b51-c72a-4695-80c4-f542f61f5531#/",
+      },
+    ],
+  },
+  {
+    heading: "Fireblocks Operator Certificate",
+    dates: "2024",
+    description:
+      "A comprehensive certification demonstrating proficiency in digital asset management using the Fireblocks platform. The certification covers essential skills in cryptocurrency operations, secure vault management, transaction lifecycle handling, and DeFi operations. Key competencies include Web3 asset management, staking operations, NFT handling, and implementation of digital asset security best practices through the Fireblocks Network.",
+    links: [
+      {
+        name: "Verify on Credly",
+        url: "https://www.credly.com/badges/3ecdbc81-db29-48b7-af14-8a5400372763/public_url",
+      },
+    ],
+  },
+];
+
 const educationData: Expirience = {
   heading: "University College London",
   subheading: "MEng Computer Science",
@@ -81,6 +120,14 @@ export default function CV() {
           {...educationData}
           isLast={true}
         />
+        <h1 className='text-2xl md:text-6xl font-bold font-heading mt-12 mb-8 lg:text-center'>
+          Certifications
+        </h1>
+        {certifications.map((episode) => (
+          <div key={episode.heading} className='pb-8'>
+            <Experience {...episode} isLast={true} />
+          </div>
+        ))}
       </div>
     </div>
   );
