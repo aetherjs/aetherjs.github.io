@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Karla, Inconsolata } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { ThemeProvider } from "@/context/ThemeContext";
 
 const karla = Karla({
@@ -45,6 +46,7 @@ export default function RootLayout({
         <ThemeProvider>
           <Header />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
